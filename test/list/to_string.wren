@@ -14,4 +14,8 @@ class Foo {
 
 IO.print([1, new Foo, 2]) // expect: [1, Foo.toString, 2]
 
-// TODO: Handle lists that contain themselves.
+var x = []
+var y = []
+y.add(x)
+x.add(y)
+IO.print(x.toString) // expect: [[..]]
